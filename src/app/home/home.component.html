@@ -1,36 +1,28 @@
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-text">
-      <div class="badge">Étudiant en Licence - Dernière Année</div>
-      <h1>NIRINA REMI <span class="gradient-text">Stephano</span></h1>
-      <p class="tagline">Développeur Full Stack | Innovateur | Passionné</p>
-      <p class="description">
-        Créatif et déterminé, je transforme les idées en solutions digitales robustes.
-        Spécialisé dans les technologies modernes comme Angular, NestJS et TypeScript.
-      </p>
-      <div class="cta-buttons">
-        <a href="#contact" class="btn-primary">Me Contacter</a>
-        <a href="#projects" class="btn-secondary">Voir Projets</a>
-      </div>
-    </div>
-    <div class="hero-image">
-      <div class="image-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-    </div>
-  </div>
-  <div class="stats">
-    <div class="stat-item">
-      <h3>2+</h3>
-      <p>Années d'expérience</p>
-    </div>
-    <div class="stat-item">
-      <h3>15+</h3>
-      <p>Projets réalisés</p>
-    </div>
-    <div class="stat-item">
-      <h3>6</h3>
-      <p>Technologies maîtrisées</p>
+<div class="home-container">
+  <div class="hero-content animate-fade-in-up">
+    <div class="badge animate-slide-in">Étudiant en Licence - Dernière Année</div>
+    <h1 class="animate-slide-in delay-1">
+      NIRINA REMI <span class="gradient-text">Stephano</span>
+    </h1>
+    <p class="tagline animate-slide-in delay-2">
+      <span class="typed-text"></span>
+    </p>
+    <p class="description animate-slide-in delay-3">
+      Développeur Full Stack passionné, je transforme les idées en solutions digitales 
+      innovantes. Spécialisé dans Angular, NestJS et les technologies modernes.
+    </p>
+    <div class="cta-buttons animate-slide-in delay-4">
+      <button (click)="scrollToContact()" class="btn-primary">
+        Me Contacter <i class="fas fa-arrow-right"></i>
+      </button>
+      <button (click)="scrollToProjects()" class="btn-secondary">
+        Voir Projets <i class="fas fa-code"></i>
+      </button>
     </div>
   </div>
-</section>
+
+  <div class="scroll-indicator animate-bounce">
+    <div class="mouse"></div>
+    <div class="arrow">Scroll</div>
+  </div>
+</div>

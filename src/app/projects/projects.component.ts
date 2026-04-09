@@ -7,7 +7,7 @@ import { DataService, Project } from '../data.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: []
 })
 export class ProjectsComponent implements OnInit {
   projects: Project[] = [];

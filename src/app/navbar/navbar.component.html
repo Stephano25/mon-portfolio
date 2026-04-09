@@ -1,13 +1,13 @@
 <nav class="navbar">
   <div class="nav-brand">
-    <h2>NIRINA REMI <span class="highlight">Stephano</span></h2>
+    <h2 (click)="scrollTo('home')" style="cursor: pointer;">NIRINA REMI <span class="highlight">Stephano</span></h2>
   </div>
   <div class="nav-links" [class.active]="menuOpen">
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
-    <a routerLink="/about" routerLinkActive="active">À Propos</a>
-    <a routerLink="/skills" routerLinkActive="active">Compétences</a>
-    <a routerLink="/projects" routerLinkActive="active">Projets</a>
-    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    <a (click)="scrollTo('home')" class="nav-link">Accueil</a>
+    <a (click)="scrollTo('about')" class="nav-link">À Propos</a>
+    <a (click)="scrollTo('skills')" class="nav-link">Compétences</a>
+    <a (click)="scrollTo('projects')" class="nav-link">Projets</a>
+    <a (click)="scrollTo('contact')" class="nav-link">Contact</a>
   </div>
   <div class="menu-icon" (click)="toggleMenu()">
     <i class="fas" [class.fa-bars]="!menuOpen" [class.fa-times]="menuOpen"></i>

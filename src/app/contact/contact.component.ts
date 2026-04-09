@@ -7,10 +7,10 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: []
 })
 export class ContactComponent {
   onSubmit() {
-    alert('Message envoyé avec succès!');
+    alert('Message envoyé avec succès! Je vous répondrai dans les plus brefs délais.');
   }
 }
