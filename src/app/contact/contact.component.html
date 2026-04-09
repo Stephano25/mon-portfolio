@@ -1,0 +1,54 @@
+<section class="contact">
+  <div class="container">
+    <h2 class="section-title">Me Contacter</h2>
+    
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <p>stephano.nirina@zurcher.mg</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h4>Téléphone</h4>
+            <p>+261 34 123 4567</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fab fa-github"></i>
+          <div>
+            <h4>GitHub</h4>
+            <p>github.com/stephano-nirina</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fab fa-linkedin"></i>
+          <div>
+            <h4>LinkedIn</h4>
+            <p>linkedin.com/in/stephano-nirina</p>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Votre nom" required ngModel>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Votre email" required ngModel>
+        </div>
+        <div class="form-group">
+          <input type="text" name="subject" placeholder="Sujet" required ngModel>
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="5" placeholder="Votre message" required ngModel></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Envoyer le message</button>
+      </form>
+    </div>
+  </div>
+</section>
