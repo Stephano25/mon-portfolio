@@ -13,7 +13,7 @@ export class AboutComponent {
     { number: '4+', label: 'Projets réalisés' },
     { number: '12+', label: 'Technologies' },
     { number: '2', label: 'Langues' },
-    { number: '2025', label: 'Diplômé' }
+    { number: '2026', label: 'Diplômé' }
   ];
 
   cards = [
@@ -51,7 +51,7 @@ export class AboutComponent {
       description: 'Apprentissage d\'Angular, NestJS, et bases de données'
     },
     {
-      date: '2024-2025',
+      date: '2024-2026',
       title: 'Projets professionnels',
       description: 'Réalisation de projets full stack pour des clients'
     }
