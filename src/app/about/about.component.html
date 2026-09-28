@@ -1,59 +1,60 @@
-<div style="padding: 100px 20px; background: white; min-height: 100vh;">
-  <div style="max-width: 1200px; margin: 0 auto;">
-    <h1 style="text-align: center; color: #667eea; margin-bottom: 50px;">À Propos de Moi</h1>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 50px;">
-      <div style="padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center;">
-        <i class="fas fa-user-graduate" style="font-size: 50px; color: #667eea; margin-bottom: 20px;"></i>
-        <h3>Parcours Académique</h3>
-        <p>Étudiant en dernière année de Licence à l'Université Adventiste Zurcher</p>
+<section class="about-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Qui suis-je</span>
+      <h2 class="section-title">À Propos</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-main reveal-left">
+        <p class="about-intro">
+          Basé à <span class="highlight">Toamasina 🇲🇬</span>
+        </p>
+        <p class="about-text">
+          Étudiant en dernière année de Licence en Informatique à l'Université Adventiste Zurcher, 
+          je suis passionné par le développement web et les technologies modernes. Je conçois des 
+          applications web et mobiles modernes et possède une expérience pratique en frontend, 
+          backend, bases de données et API REST.
+        </p>
+        <p class="about-text">
+          Curieux, autonome et passionné par les nouvelles technologies, je recherche une 
+          opportunité professionnelle pour contribuer à des projets concrets et continuer à progresser.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-item reveal" *ngFor="let stat of stats; let i = index" [class]="'delay-' + (i + 1)">
+            <span class="stat-number">{{ stat.number }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        </div>
       </div>
-      
-      <div style="padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center;">
-        <i class="fas fa-map-marker-alt" style="font-size: 50px; color: #667eea; margin-bottom: 20px;"></i>
-        <h3>Localisation</h3>
-        <p>Né le 19 Octobre 2000 à Tamatave, Madagascar</p>
-      </div>
-      
-      <div style="padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center;">
-        <i class="fas fa-heart" style="font-size: 50px; color: #667eea; margin-bottom: 20px;"></i>
-        <h3>Passions</h3>
-        <p>Développement web, innovation, et apprentissage continu</p>
-      </div>
-      
-      <div style="padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center;">
-        <i class="fas fa-bullseye" style="font-size: 50px; color: #667eea; margin-bottom: 20px;"></i>
-        <h3>Objectifs</h3>
-        <p>Devenir expert Full Stack et créer des solutions innovantes</p>
+
+      <div class="about-cards reveal-right">
+        <div class="info-card" *ngFor="let card of cards; let i = index" [class]="'delay-' + (i + 1)">
+          <div class="card-icon">
+            <i class="fas {{ card.icon }}"></i>
+          </div>
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.description }}</p>
+        </div>
       </div>
     </div>
-    
-    <div style="margin-top: 50px;">
-      <h2 style="text-align: center; margin-bottom: 30px;">Mon Parcours</h2>
-      
-      <div style="display: flex; margin-bottom: 20px; gap: 20px;">
-        <div style="min-width: 120px; font-weight: bold; color: #667eea;">2022-2023</div>
-        <div style="background: #f7fafc; padding: 15px; border-radius: 8px; flex: 1;">
-          <h4>Début en développement</h4>
-          <p>Premiers projets web et apprentissage des bases</p>
-        </div>
-      </div>
-      
-      <div style="display: flex; margin-bottom: 20px; gap: 20px;">
-        <div style="min-width: 120px; font-weight: bold; color: #667eea;">2023-2024</div>
-        <div style="background: #f7fafc; padding: 15px; border-radius: 8px; flex: 1;">
-          <h4>Maîtrise des frameworks</h4>
-          <p>Apprentissage d'Angular, NestJS, et bases de données</p>
-        </div>
-      </div>
-      
-      <div style="display: flex; margin-bottom: 20px; gap: 20px;">
-        <div style="min-width: 120px; font-weight: bold; color: #667eea;">2024-2025</div>
-        <div style="background: #f7fafc; padding: 15px; border-radius: 8px; flex: 1;">
-          <h4>Projets professionnels</h4>
-          <p>Réalisation de projets full stack pour des clients</p>
+
+    <!-- Timeline -->
+    <div class="timeline-section reveal">
+      <h3 class="timeline-title">Mon Parcours</h3>
+      <div class="timeline">
+        <div class="timeline-item" *ngFor="let item of timeline; let i = index" [class]="'reveal delay-' + (i + 1)">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-date">{{ item.date }}</span>
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.description }}</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
