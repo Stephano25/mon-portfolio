@@ -42,12 +42,22 @@ export class SkillsComponent {
       ]
     },
     {
+      title: 'PHP & Frameworks',
+      icon: 'fa-php',
+      skills: [
+        { name: 'PHP', level: 85 },
+        { name: 'Laravel', level: 75 },
+        { name: 'MySQL / PDO', level: 85 },
+        { name: 'Composer', level: 70 }
+      ]
+    },
+    {
       title: 'Base de Données',
       icon: 'fa-database',
       skills: [
         { name: 'MongoDB', level: 85 },
         { name: 'PostgreSQL', level: 80 },
-        { name: 'MySQL', level: 75 },
+        { name: 'MySQL', level: 85 },
         { name: 'Redis', level: 70 }
       ]
     }
@@ -55,7 +65,8 @@ export class SkillsComponent {
 
   techTags = [
     'Git/GitHub', 'Docker', 'JWT', 'Agile/Scrum', 
-    'Postman', 'VS Code', 'Figma', 'Swagger', 'UML'
+    'Postman', 'VS Code', 'Figma', 'Swagger', 'UML',
+    'PHP', 'Laravel', 'PDO', 'Composer', 'XAMPP'
   ];
 
   softSkills = [

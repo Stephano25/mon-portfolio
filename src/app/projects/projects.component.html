@@ -23,6 +23,11 @@
           <!-- Icône de fallback si pas d'image -->
           <i *ngIf="!project.image" 
              class="fas {{ project.icon }}"></i>
+
+          <!-- ✅ Badge catégorie (PHP, etc.) -->
+          <span *ngIf="project.category" class="category-badge">
+            <i class="fab fa-php"></i> {{ project.category }}
+          </span>
           
           <div class="project-overlay">
             <span class="overlay-text">

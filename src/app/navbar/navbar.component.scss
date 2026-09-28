@@ -7,7 +7,7 @@
   padding: 1rem 5%;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   background: transparent;
-  
+
   &.scrolled {
     background: rgba(15, 15, 35, 0.85);
     backdrop-filter: blur(20px);
@@ -31,24 +31,24 @@
   gap: 0.5rem;
   cursor: pointer;
   transition: transform 0.3s;
-  
+
   &:hover {
     transform: scale(1.02);
   }
-  
+
   .brand-icon {
     font-family: 'JetBrains Mono', monospace;
     font-size: 1.2rem;
     color: var(--primary);
     font-weight: 700;
   }
-  
+
   .brand-text {
     font-size: 1.1rem;
     font-weight: 700;
     color: white;
     letter-spacing: -0.5px;
-    
+
     .highlight {
       background: var(--gradient);
       -webkit-background-clip: text;
@@ -72,14 +72,14 @@
   transition: all 0.3s;
   position: relative;
   text-decoration: none;
-  
+
   .link-number {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.75rem;
     color: var(--primary);
     margin-right: 0.25rem;
   }
-  
+
   &::after {
     content: '';
     position: absolute;
@@ -90,21 +90,42 @@
     background: var(--gradient);
     transition: width 0.3s;
   }
-  
+
   &:hover {
     color: white;
-    
+
     &::after {
       width: 100%;
     }
   }
-  
+
   &.active {
     color: white;
-    
+
     &::after {
       width: 100%;
     }
+  }
+}
+
+/* ===== Bouton CV dans la navbar ===== */
+.nav-cv-btn {
+  padding: 0.5rem 1.25rem;
+  background: var(--gradient);
+  color: white;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.5);
   }
 }
 
@@ -114,7 +135,7 @@
   gap: 5px;
   cursor: pointer;
   padding: 5px;
-  
+
   span {
     display: block;
     width: 25px;
@@ -122,7 +143,7 @@
     background: white;
     transition: all 0.3s;
     border-radius: 2px;
-    
+
     &.active {
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
@@ -137,11 +158,12 @@
   }
 }
 
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .menu-icon {
     display: flex;
   }
-  
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -155,13 +177,17 @@
     align-items: center;
     gap: 2rem;
     transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    
+
     &.active {
       right: 0;
     }
   }
-  
+
   .nav-link {
     font-size: 1.2rem;
+  }
+
+  .nav-cv-btn {
+    margin-top: 1rem;
   }
 }

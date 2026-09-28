@@ -10,6 +10,7 @@ interface Project {
   image?: string;
   link?: string;
   github?: string;
+  category?: string;
 }
 
 @Component({
@@ -63,6 +64,17 @@ export class ProjectsComponent implements OnInit {
         image: 'assets/images/projects/api-mobile.jpg',
         link: '#',
         github: 'https://github.com/Stephano25'
+      },
+      {
+        title: 'Système de Gestion de Bibliothèque',
+        description: 'Application web PHP avec gestion des livres, emprunts, utilisateurs et rapports statistiques. Interface d\'administration complète.',
+        technologies: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
+        icon: 'fa-book',
+        gradient: 'linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)',
+        image: 'assets/images/projects/php-bibliotheque.jpg',
+        link: '#',
+        github: 'https://github.com/Stephano25',
+        category: 'PHP'
       }
     ];
   }

@@ -21,8 +21,15 @@
       <a (click)="scrollTo('contact')" class="nav-link" [class.active]="activeSection === 'contact'">
         <span class="link-number">05.</span> Contact
       </a>
+
+      <!-- ✅ Bouton CV dans la navbar -->
+      <a href="assets/cv/cv-stephano-nirina.pdf" 
+         download="CV-NIRINA-REMI-Stephano.pdf"
+         class="nav-cv-btn">
+        <i class="fas fa-download"></i> CV
+      </a>
     </div>
-    
+
     <div class="menu-icon" (click)="toggleMenu()">
       <span [class.active]="menuOpen"></span>
       <span [class.active]="menuOpen"></span>
