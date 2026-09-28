@@ -73,7 +73,7 @@ export class ProjectsComponent implements OnInit {
         gradient: 'linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)',
         image: 'assets/images/projects/presence_php.jpg',
         link: '#',
-        github: 'git@github.com:Stephano25/presence.git',
+        github: 'https://github.com/Stephano25/presence.git',
         category: 'PHP'
       }
     ];
