@@ -31,7 +31,7 @@ export class ProjectsComponent implements OnInit {
         technologies: ['React-Native','TypeScript'],
         icon: 'fa-school',
         gradient: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-        image: 'assets/images/projects/bible.png',
+        image: 'assets/images/projects/bible.jpg',
         link: '#',
         github: 'https://github.com/Stephano25/ma-bible.git'
       },
