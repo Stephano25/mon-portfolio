@@ -66,14 +66,14 @@ export class ProjectsComponent implements OnInit {
         github: 'https://github.com/Stephano25'
       },
       {
-        title: 'Système de Gestion de Bibliothèque',
-        description: 'Application web PHP avec gestion des livres, emprunts, utilisateurs et rapports statistiques. Interface d\'administration complète.',
+        title: 'Système de Gestion de presence des employées en PHP',
+        description: 'Application web et de faire de rapport automatique et de générer des badge en code barre ou QRCode et interface pour faire de pointage manuel ou par scan. Interface d\'administration complète.',
         technologies: ['PHP', 'MySQL', 'Bootstrap', 'jQuery'],
         icon: 'fa-book',
         gradient: 'linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)',
-        image: 'assets/images/projects/php-bibliotheque.jpg',
+        image: 'assets/images/projects/presence_php.jpg',
         link: '#',
-        github: 'https://github.com/Stephano25',
+        github: 'git@github.com:Stephano25/presence.git',
         category: 'PHP'
       }
     ];
