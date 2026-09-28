@@ -1,7 +1,8 @@
 <div class="home-container">
   <!-- Particules de fond -->
   <div class="particles">
-    <div class="particle" *ngFor="let p of particles" 
+    <div class="particle" 
+         *ngFor="let p of particles" 
          [style.left.%]="p.left" 
          [style.top.%]="p.top"
          [style.animation-delay]="p.delay + 's'"
@@ -10,6 +11,17 @@
   </div>
 
   <div class="hero-content">
+    <!-- ✅ Photo de profil -->
+    <div class="profile-photo-wrapper animate-scale-in">
+      <div class="profile-photo-ring"></div>
+      <img 
+        src="assets/images/profile/stephano.jpg" 
+        alt="NIRINA REMI Stephano" 
+        class="profile-photo"
+        onerror="this.src='https://ui-avatars.com/api/?name=Stephano+Nirina&size=200&background=6366f1&color=fff'">
+      <span class="status-dot"></span>
+    </div>
+
     <div class="badge animate-fade-in-up">
       <span class="badge-dot"></span>
       Disponible immédiatement

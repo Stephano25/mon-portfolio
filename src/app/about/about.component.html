@@ -6,7 +6,19 @@
     </div>
 
     <div class="about-grid">
-      <div class="about-main reveal-left">
+      <!-- ✅ Colonne photo -->
+      <div class="about-photo reveal-left">
+        <div class="photo-frame">
+          <img 
+            src="assets/images/profile/stephano-about.jpg" 
+            alt="Stephano Nirina"
+            onerror="this.src='https://ui-avatars.com/api/?name=Stephano+Nirina&size=400&background=6366f1&color=fff'">
+        </div>
+        <div class="photo-decoration"></div>
+      </div>
+
+      <!-- Colonne texte -->
+      <div class="about-main reveal-right">
         <p class="about-intro">
           Basé à <span class="highlight">Toamasina 🇲🇬</span>
         </p>
@@ -22,15 +34,20 @@
         </p>
 
         <div class="stats-grid">
-          <div class="stat-item reveal" *ngFor="let stat of stats; let i = index" [class]="'delay-' + (i + 1)">
+          <div class="stat-item reveal" 
+               *ngFor="let stat of stats; let i = index" 
+               [class]="'delay-' + (i + 1)">
             <span class="stat-number">{{ stat.number }}</span>
             <span class="stat-label">{{ stat.label }}</span>
           </div>
         </div>
       </div>
 
+      <!-- Colonne cartes -->
       <div class="about-cards reveal-right">
-        <div class="info-card" *ngFor="let card of cards; let i = index" [class]="'delay-' + (i + 1)">
+        <div class="info-card" 
+             *ngFor="let card of cards; let i = index" 
+             [class]="'delay-' + (i + 1)">
           <div class="card-icon">
             <i class="fas {{ card.icon }}"></i>
           </div>
@@ -44,7 +61,9 @@
     <div class="timeline-section reveal">
       <h3 class="timeline-title">Mon Parcours</h3>
       <div class="timeline">
-        <div class="timeline-item" *ngFor="let item of timeline; let i = index" [class]="'reveal delay-' + (i + 1)">
+        <div class="timeline-item" 
+             *ngFor="let item of timeline; let i = index" 
+             [class]="'reveal delay-' + (i + 1)">
           <div class="timeline-marker">
             <div class="marker-dot"></div>
           </div>

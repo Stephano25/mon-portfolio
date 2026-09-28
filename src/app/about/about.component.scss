@@ -7,7 +7,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -36,19 +36,69 @@
   margin-bottom: 0.5rem;
 }
 
+/* ===== Grille principale : 3 colonnes ===== */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 0.9fr 1.2fr 1fr;
+  gap: 3rem;
   margin-bottom: 4rem;
   align-items: start;
 }
 
+/* ===== Photo ===== */
+.about-photo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.photo-frame {
+  position: relative;
+  width: 280px;
+  height: 360px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.photo-decoration {
+  position: absolute;
+  width: 280px;
+  height: 360px;
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  top: 40px;
+  left: 40px;
+  z-index: 0;
+  transition: all 0.4s;
+}
+
+.about-photo:hover .photo-decoration {
+  top: 35px;
+  left: 35px;
+  border-color: var(--accent);
+}
+
+/* ===== Texte ===== */
 .about-intro {
   font-size: 1.2rem;
   color: var(--text-light);
   margin-bottom: 1.5rem;
-  
+
   .highlight {
     color: white;
     font-weight: 600;
@@ -76,13 +126,13 @@
   padding: 1.5rem;
   text-align: center;
   transition: all 0.3s;
-  
+
   &:hover {
     background: rgba(99, 102, 241, 0.1);
     border-color: rgba(99, 102, 241, 0.3);
     transform: translateY(-5px);
   }
-  
+
   .stat-number {
     display: block;
     font-size: 2rem;
@@ -93,7 +143,7 @@
     background-clip: text;
     margin-bottom: 0.25rem;
   }
-  
+
   .stat-label {
     font-size: 0.8rem;
     color: var(--text-light);
@@ -102,6 +152,7 @@
   }
 }
 
+/* ===== Cartes info ===== */
 .about-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -115,14 +166,14 @@
   padding: 1.5rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
-  
+
   &:hover {
     transform: translateY(-8px);
     background: rgba(99, 102, 241, 0.08);
     border-color: rgba(99, 102, 241, 0.3);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   }
-  
+
   .card-icon {
     width: 50px;
     height: 50px;
@@ -132,20 +183,20 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
-    
+
     i {
       font-size: 1.3rem;
       color: white;
     }
   }
-  
+
   h3 {
     color: white;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
   }
-  
+
   p {
     color: var(--text-light);
     font-size: 0.85rem;
@@ -153,7 +204,7 @@
   }
 }
 
-/* Timeline */
+/* ===== Timeline ===== */
 .timeline-section {
   margin-top: 3rem;
 }
@@ -170,7 +221,7 @@
   position: relative;
   max-width: 800px;
   margin: 0 auto;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -189,7 +240,7 @@
   margin-bottom: 2.5rem;
   position: relative;
   padding-left: 2rem;
-  
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -199,7 +250,7 @@
   position: absolute;
   left: -6px;
   top: 0;
-  
+
   .marker-dot {
     width: 14px;
     height: 14px;
@@ -217,27 +268,27 @@
   padding: 1.5rem;
   flex: 1;
   transition: all 0.3s;
-  
+
   &:hover {
     background: rgba(99, 102, 241, 0.08);
     border-color: rgba(99, 102, 241, 0.3);
     transform: translateX(5px);
   }
-  
+
   .timeline-date {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.75rem;
     color: var(--primary);
     letter-spacing: 1px;
   }
-  
+
   h4 {
     color: white;
     font-size: 1.05rem;
     font-weight: 600;
     margin: 0.5rem 0;
   }
-  
+
   p {
     color: var(--text-light);
     font-size: 0.85rem;
@@ -245,12 +296,35 @@
   }
 }
 
-@media (max-width: 968px) {
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .about-cards {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
+  .photo-frame,
+  .photo-decoration {
+    width: 240px;
+    height: 300px;
+  }
+
+  .photo-decoration {
+    top: 25px;
+    left: 25px;
+  }
+
   .about-cards {
     grid-template-columns: 1fr 1fr;
   }
@@ -260,7 +334,7 @@
   .about-cards {
     grid-template-columns: 1fr;
   }
-  
+
   .stats-grid {
     grid-template-columns: 1fr 1fr;
   }
