@@ -26,14 +26,14 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
     this.projects = [
       {
-        title: 'Application de Gestion Scolaire',
-        description: 'Plateforme complète de gestion des étudiants, cours et notes avec Angular et NestJS.',
-        technologies: ['Angular', 'NestJS', 'MongoDB', 'TypeScript'],
+        title: 'Application de Bible',
+        description: 'Une application de la bible, tri-langue, avec des fonctionnalités de recherche et de lecture hors ligne.',
+        technologies: ['React-Native','TypeScript'],
         icon: 'fa-school',
         gradient: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-        image: 'assets/images/projects/gestion-scolaire.jpg',
+        image: 'assets/images/projects/bible.png',
         link: '#',
-        github: 'https://github.com/Stephano25'
+        github: 'https://github.com/Stephano25/ma-bible.git'
       },
       {
         title: 'Marketplace E-commerce',
