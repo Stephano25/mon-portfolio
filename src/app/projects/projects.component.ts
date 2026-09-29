@@ -58,7 +58,7 @@ export class ProjectsComponent implements OnInit {
       {
         title: 'API REST pour Application Mobile',
         description: 'Backend scalable pour application mobile de livraison de repas.',
-        technologies: ['NestJS', 'TypeScript', 'PostgreSQL', 'Redis'],
+        technologies: ['NestJS', 'TypeScript', 'PostgreSQL'],
         icon: 'fa-cloud',
         gradient: 'linear-gradient(135deg, #f59e0b 0%, #ec4899 100%)',
         image: 'assets/images/projects/api-mobile.jpg',
